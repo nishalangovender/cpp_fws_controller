@@ -1,0 +1,126 @@
+fws_controller:
+  wheelbase:
+    {
+      type: double,
+      default_value: 0.0,
+      description: "Distance between front and rear wheel. For details see: https://en.wikipedia.org/wiki/Wheelbase",
+      read_only: false,
+    }
+
+  front_wheel_radius:
+    {
+      type: double,
+      default_value: 0.0,
+      description: "Front wheel radius.",
+      read_only: false,
+    }
+
+  rear_wheel_radius:
+    {
+      type: double,
+      default_value: 0.0,
+      description: "Rear wheel radius.",
+      read_only: false,
+    }
+
+# fws_controller:
+
+#   # Controller update rate in Hz
+#   # Adjust this value based on your control loop requirements
+#   controller_frequency: 50.0
+
+#   # List of steering joints (position control)
+#   steering_joint_names:
+#     - front_left_steering_joint
+#     - front_right_steering_joint
+#     - rear_left_steering_joint
+#     - rear_right_steering_joint
+
+#   # List of wheel joints (velocity control)
+#   wheel_joint_names:
+#     - front_left_wheel_joint
+#     - front_right_wheel_joint
+#     - rear_left_wheel_joint
+#     - rear_right_wheel_joint
+
+#   # Command interfaces for steering joints (position control)
+#   command_interface_types:
+#     - position
+
+#   # Command interfaces for wheel joints (velocity control)
+#   state_interface_types:
+#     - velocity
+
+#   # Configuration for each steering joint (position control)
+#   steering_joint_config:
+#     front_left_steering_joint:
+#       type: "position"
+#       pid:
+#         p: 100.0
+#         i: 0.01
+#         d: 10.0
+#       min_position: -2.0  # Minimum allowed position (radians)
+#       max_position: 2.0   # Maximum allowed position (radians)
+#     front_right_steering_joint:
+#       type: "position"
+#       pid:
+#         p: 100.0
+#         i: 0.01
+#         d: 10.0
+#       min_position: -2.0  # Minimum allowed position (radians)
+#       max_position: 2.0   # Maximum allowed position (radians)
+#     rear_left_steering_joint:
+#       type: "position"
+#       pid:
+#         p: 100.0
+#         i: 0.01
+#         d: 10.0
+#       min_position: -2.0  # Minimum allowed position (radians)
+#       max_position: 2.0   # Maximum allowed position (radians)
+#     rear_right_steering_joint:
+#       type: "position"
+#       pid:
+#         p: 100.0
+#         i: 0.01
+#         d: 10.0
+#       min_position: -2.0  # Minimum allowed position (radians)
+#       max_position: 2.0   # Maximum allowed position (radians)
+
+#   # Configuration for each wheel joint (velocity control)
+#   wheel_joint_config:
+#     front_left_wheel_joint:
+#       type: "velocity"
+#       pid:
+#         p: 10.0
+#         i: 0.1
+#         d: 1.0
+#       min_velocity: -3.0  # Minimum allowed velocity (rad/s)
+#       max_velocity: 3.0   # Maximum allowed velocity (rad/s)
+#     front_right_wheel_joint:
+#       type: "velocity"
+#       pid:
+#         p: 10.0
+#         i: 0.1
+#         d: 1.0
+#       min_velocity: -3.0  # Minimum allowed velocity (rad/s)
+#       max_velocity: 3.0   # Maximum allowed velocity (rad/s)
+#     rear_left_wheel_joint:
+#       type: "velocity"
+#       pid:
+#         p: 10.0
+#         i: 0.1
+#         d: 1.0
+#       min_velocity: -3.0  # Minimum allowed velocity (rad/s)
+#       max_velocity: 3.0   # Maximum allowed velocity (rad/s)
+#     rear_right_wheel_joint:
+#       type: "velocity"
+#       pid:
+#         p: 10.0
+#         i: 0.1
+#         d: 1.0
+#       min_velocity: -3.0  # Minimum allowed velocity (rad/s)
+#       max_velocity: 3.0   # Maximum allowed velocity (rad/s)
+
+#   # Topic names for receiving control commands
+#   steering_command_topic: "/park_bot/steer_pos_cmd"
+#   wheels_velocity_command_topic: "/park_bot/wheel_vel_cmd"
