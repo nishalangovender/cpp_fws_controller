@@ -9,22 +9,16 @@
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
-  <depend>control_msgs</depend>
-  <depend>controller_interface</depend>
-  <depend>hardware_interface</depend>
-  <depend>kdl_parser</depend>
+  <depend>backward_ros</depend>
+  <depend>position_controllers</depend>
   <depend>pluginlib</depend>
-  <depend>rclcpp_lifecycle</depend>
   <depend>rclcpp</depend>
-  <depend>rcpputils</depend>
-  <depend>realtime_tools</depend>
-  <depend>trajectory_msgs</depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
 
   <export>
     <build_type>ament_cmake</build_type>
-    <ros2_control plugin="${PROJECT_NAME}::FWSController"/>
+    <!-- <ros2_control plugin="${PROJECT_NAME}::FWSController"/> -->
   </export>
 </package>

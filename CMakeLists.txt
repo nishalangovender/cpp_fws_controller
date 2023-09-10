@@ -6,15 +6,15 @@ if (CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
 endif()
 
 set(CONTROLLER_INCLUDE_DEPENDS
+  position_controllers
   pluginlib
-  rcpputils
+  rclcpp
   controller_interface
-  realtime_tools
-  trajectory_msgs
 )
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
+find_package(backward_ros REQUIRED)
 
 foreach(Dependency IN ITEMS ${CONTROLLER_INCLUDE_DEPENDS})
   find_package(${Dependency} REQUIRED)

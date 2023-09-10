@@ -1,5 +1,5 @@
 <library path="fws_controller">
     <class name="fws_controller/FWSController" type="fws_controller::FWSController" base_class_type="controller_interface::ControllerInterface">
-        <description>The four wheel steering controller applies a total speed and front/rear steering angle commands to a 4WD/4WS motor base with independently steered axes.</description>
+        <description>The four wheel steering controller applies a position controller to the steering, and a velocity controller to the wheels.</description>
     </class>
 </library>

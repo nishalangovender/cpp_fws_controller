@@ -1,0 +1,6 @@
+fws_controller:
+  joints: {
+    type: string_array,
+    default_value: ["front_left_steering_joint", "front_right_steering_joint", "rear_left_steering_joint", "rear_right_steering_joint"],
+    description: "Name of the joints to control"
+  }
